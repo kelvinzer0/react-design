@@ -9,6 +9,7 @@ import {
 import renderHandlebars from '../utils/renderHandlebars';
 import NarrowSidebar from "../components/NarrowSidebar";
 import WideSidebar from "../components/WideSidebar";
+import PageManager from "../components/PageManager"; // Import PageManager
 
 import Preview from "./Preview";
 import BlocksGallery from "./BlocksGallery";
@@ -80,12 +81,16 @@ class App extends React.Component {
   }
 
   handleReorderLayout(newOrder) {
+    const { pages, activePageIndex } = this.props.layout;
+    const activePage = pages[activePageIndex];
     const newBlocksLayout = [];
     newOrder.forEach(blockUuid => {
-      const block = this.props.layout.blocks.find(el => {
+      const block = activePage.blocks.find(el => {
         return el.uuid === blockUuid;
-      })
-      newBlocksLayout.push(block);
+      });
+      if (block) {
+        newBlocksLayout.push(block);
+      }
     });
 
     this.props.dispatch({
@@ -95,7 +100,9 @@ class App extends React.Component {
   }
 
   render() {
-    const innerHTML = renderHandlebars(this.props.layout.blocks, this.props.layout.documentId);
+    const { pages, activePageIndex } = this.props.layout;
+    const activePage = pages[activePageIndex];
+    const innerHTML = renderHandlebars(activePage.blocks, activePage.templateId);
     const {activeTab, previewMode} = this.props.config;
 
     return (
@@ -128,6 +135,8 @@ class App extends React.Component {
                   category='ad'
                   display={activeTab === 5}
                   onPushBlock={this.handlePushBlock} />
+                <PageManager
+                  display={activeTab === 6} />
                 <Output
                   display={activeTab === 9}
                   html={innerHTML}/>

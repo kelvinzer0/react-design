@@ -5,7 +5,14 @@ import blocks from "../views/blocks";
 
 function render(layoutBlocks, documentId) {
   const innerHTML = layoutBlocks.reduce((acc, layoutBlock) => {
-    const blockHbs = blocks[layoutBlock.blockId].hbs;
+    const blockConfig = blocks[layoutBlock.blockId];
+
+    if (!blockConfig || !blockConfig.hbs) {
+      console.error(`Block with id "${layoutBlock.blockId}" not found or is missing hbs template. Skipping.`);
+      return acc;
+    }
+
+    const blockHbs = blockConfig.hbs;
     const blockTemplate = handlebars.compile(blockHbs);
     const blockHTML = blockTemplate(layoutBlock.data);
 
@@ -18,7 +25,13 @@ function render(layoutBlocks, documentId) {
     return `${acc}${sectionHTML}`;
   }, ``);
 
-  return handlebars.compile(documents[documentId].hbs)({
+  const documentConfig = documents[documentId];
+  if (!documentConfig || !documentConfig.hbs) {
+    console.error(`Document with id "${documentId}" not found or is missing hbs template.`);
+    return 'Error: Document template not found.';
+  }
+
+  return handlebars.compile(documentConfig.hbs)({
     content: innerHTML
   });
 }
