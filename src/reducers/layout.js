@@ -110,6 +110,18 @@ export default function reducer(state = initialState, action) {
         selectedBlockUuid: '',
       };
     }
+    case actionTypes.CHANGE_TEMPLATE_ID: {
+      const { templateId } = action;
+      const newPages = [...state.pages];
+      newPages[state.activePageIndex] = {
+        ...newPages[state.activePageIndex],
+        templateId: templateId,
+      };
+      return {
+        ...state,
+        pages: newPages,
+      };
+    }
     case actionTypes.UPDATE_PAGE_NAME: {
         const { pageIndex, newName } = action;
         const newPages = [...state.pages];
