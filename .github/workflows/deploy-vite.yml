@@ -32,7 +32,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./build
           cname: react-design.tcp4.me
 
       - name: Create release-blocks.zip
