@@ -27,9 +27,9 @@ const hbs = `
 
 const block = {
   hbs,
-  name: 'Call to Action Section #1 cta',
+  name: 'Call to Action Section #1',
   previewImageUrl: 'https://i.imgur.com/cta1.png',
-  category: 'cta',
+  category: 'article',
   defaultData: {
     title: "Ready to Get Started?",
     subtitle: "Join thousands of satisfied customers who trust our platform to grow their business.",

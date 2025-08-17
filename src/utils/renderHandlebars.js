@@ -3,7 +3,7 @@ import documents from "../views/documents";
 import section from "../views/section";
 import blocks from "../views/blocks";
 
-function render(layoutBlocks, documentId) {
+function render(layoutBlocks, documentId, isExport = false, name = "Exported Page") {
   const innerHTML = layoutBlocks.reduce((acc, layoutBlock) => {
     const blockConfig = blocks[layoutBlock.blockId];
 
@@ -32,7 +32,9 @@ function render(layoutBlocks, documentId) {
   }
 
   return handlebars.compile(documentConfig.hbs)({
-    content: innerHTML
+    content: innerHTML,
+    is_export: isExport,
+    title: isExport ? name : undefined
   });
 }
 

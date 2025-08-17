@@ -17,7 +17,7 @@ class Output extends Component {
   handleExport() {
     const zip = new JSZip();
     this.props.pages.forEach(page => {
-      const html = renderHandlebars(page.blocks, page.templateId);
+      const html = renderHandlebars(page.blocks, page.templateId, true, page.name);
       zip.file(`${page.name.replace(/ /g, '_')}.html`, html);
     });
 

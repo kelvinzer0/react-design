@@ -18,19 +18,19 @@ const hbs = `
             <div class="social-login mb-4">
               {{#if googleLogin}}
               <button class="btn btn-outline-danger btn-block mb-2">
-                <i class="material-icons mr-2">account_circle</i>
+                <i class="material-icons responsive-icon mr-2">account_circle</i>
                 {{googleButtonText}}
               </button>
               {{/if}}
               {{#if facebookLogin}}
               <button class="btn btn-outline-primary btn-block mb-2">
-                <i class="material-icons mr-2">facebook</i>
+                <i class="material-icons responsive-icon mr-2">facebook</i>
                 {{facebookButtonText}}
               </button>
               {{/if}}
               {{#if githubLogin}}
               <button class="btn btn-outline-dark btn-block mb-2">
-                <i class="material-icons mr-2">code</i>
+                <i class="material-icons responsive-icon mr-2">code</i>
                 {{githubButtonText}}
               </button>
               {{/if}}
@@ -46,7 +46,7 @@ const hbs = `
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text {{#if useDarkTheme}}bg-dark border-secondary{{/if}}">
-                      <i class="material-icons">{{emailIcon}}</i>
+                      <i class="material-icons responsive-icon">{{emailIcon}}</i>
                     </span>
                   </div>
                   <input type="email" class="form-control {{#if useDarkTheme}}bg-dark text-light border-secondary{{/if}}" id="email" placeholder="{{emailPlaceholder}}" required>
@@ -58,14 +58,14 @@ const hbs = `
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text {{#if useDarkTheme}}bg-dark border-secondary{{/if}}">
-                      <i class="material-icons">{{passwordIcon}}</i>
+                      <i class="material-icons responsive-icon">{{passwordIcon}}</i>
                     </span>
                   </div>
                   <input type="password" class="form-control {{#if useDarkTheme}}bg-dark text-light border-secondary{{/if}}" id="password" placeholder="{{passwordPlaceholder}}" required>
                   {{#if showPasswordToggle}}
                   <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button" id="passwordToggle">
-                      <i class="material-icons">visibility_off</i>
+                      <i class="material-icons responsive-icon">visibility_off</i>
                     </button>
                   </div>
                   {{/if}}
@@ -82,7 +82,7 @@ const hbs = `
               {{/if}}
               
               <button type="submit" class="btn btn-primary btn-block btn-lg mb-3">
-                <i class="material-icons mr-2">{{loginButtonIcon}}</i>
+                <i class="material-icons responsive-icon mr-2">{{loginButtonIcon}}</i>
                 {{loginButtonText}}
               </button>
               
@@ -110,7 +110,7 @@ const block = {
   hbs,
   name: 'Login Form Block',
   previewImageUrl: 'https://i.imgur.com/login-form.png',
-  category: 'auth',
+  category: 'article',
   defaultData: {
     loginTitle: "Welcome Back",
     loginSubtitle: "Please sign in to your account",

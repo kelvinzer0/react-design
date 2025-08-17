@@ -50,7 +50,7 @@ const block = {
   hbs,
   name: 'Features Section #1',
   previewImageUrl: 'https://i.imgur.com/features1.png',
-  category: 'features',
+  category: 'article',
   defaultData: {
     sectionTitle: "Why Choose Us",
     sectionSubtitle: "Discover the key features that make our platform stand out from the competition.",

@@ -16,14 +16,14 @@ const hbs = `
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
                 <span class="input-group-text {{#if useDarkTheme}}bg-secondary border-secondary{{else}}bg-light{{/if}}">
-                  <i class="material-icons">search</i>
+                  <i class="material-icons responsive-icon">search</i>
                 </span>
               </div>
               <input type="text" class="form-control {{#if useDarkTheme}}bg-secondary text-light{{/if}}" placeholder="{{searchPlaceholder}}" aria-label="Search">
               {{#if showAdvancedSearch}}
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">tune</i>
+                  <i class="material-icons responsive-icon">tune</i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
                   <h6 class="dropdown-header">Advanced Filters</h6>
@@ -53,7 +53,7 @@ const hbs = `
               {{/if}}
               <div class="input-group-append">
                 <button class="btn btn-primary" type="submit">
-                  <i class="material-icons mr-2">search</i>
+                  <i class="material-icons responsive-icon mr-2">search</i>
                   {{searchButtonText}}
                 </button>
               </div>
@@ -107,14 +107,14 @@ const hbs = `
                 </h6>
                 <p class="text-muted mb-1">{{description}}</p>
                 <div class="d-flex align-items-center text-muted small">
-                  <i class="material-icons mr-1" style="font-size: 16px;">schedule</i>
+                  <i class="material-icons responsive-icon mr-1" style="font-size: 16px;">schedule</i>
                   <span class="mr-3">{{date}}</span>
                   {{#if author}}
-                  <i class="material-icons mr-1" style="font-size: 16px;">person</i>
+                  <i class="material-icons responsive-icon mr-1" style="font-size: 16px;">person</i>
                   <span class="mr-3">{{author}}</span>
                   {{/if}}
                   {{#if category}}
-                  <i class="material-icons mr-1" style="font-size: 16px;">label</i>
+                  <i class="material-icons responsive-icon mr-1" style="font-size: 16px;">label</i>
                   <span>{{category}}</span>
                   {{/if}}
                 </div>
@@ -128,7 +128,7 @@ const hbs = `
             <ul class="pagination justify-content-center">
               <li class="page-item disabled">
                 <span class="page-link">
-                  <i class="material-icons">chevron_left</i>
+                  <i class="material-icons responsive-icon">chevron_left</i>
                 </span>
               </li>
               <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -138,7 +138,7 @@ const hbs = `
               <li class="page-item"><a class="page-link" href="#">10</a></li>
               <li class="page-item">
                 <a class="page-link" href="#">
-                  <i class="material-icons">chevron_right</i>
+                  <i class="material-icons responsive-icon">chevron_right</i>
                 </a>
               </li>
             </ul>

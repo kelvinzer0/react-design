@@ -34,7 +34,7 @@ const block = {
   hbs,
   name: 'Hero Section #1',
   previewImageUrl: 'https://i.imgur.com/hero1.png',
-  category: 'hero',
+  category: 'header',
   defaultData: {
     title: "Build Amazing Products",
     subtitle: "Create stunning websites and applications with our powerful tools and modern design components.",
