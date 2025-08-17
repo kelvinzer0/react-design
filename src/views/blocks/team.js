@@ -20,17 +20,17 @@ const hbs = `
           <div class="social-links">
             {{#if member1LinkedIn}}
             <a href="{{member1LinkedIn}}" class="text-muted mr-2" target="_blank">
-              <i class="material-icons">business</i>
+              <i class="material-icons responsive-icon">business</i>
             </a>
             {{/if}}
             {{#if member1Twitter}}
             <a href="{{member1Twitter}}" class="text-muted mr-2" target="_blank">
-              <i class="material-icons">alternate_email</i>
+              <i class="material-icons responsive-icon">alternate_email</i>
             </a>
             {{/if}}
             {{#if member1Email}}
             <a href="mailto:{{member1Email}}" class="text-muted" target="_blank">
-              <i class="material-icons">email</i>
+              <i class="material-icons responsive-icon">email</i>
             </a>
             {{/if}}
           </div>
@@ -49,17 +49,17 @@ const hbs = `
           <div class="social-links">
             {{#if member2LinkedIn}}
             <a href="{{member2LinkedIn}}" class="text-muted mr-2" target="_blank">
-              <i class="material-icons">business</i>
+              <i class="material-icons responsive-icon">business</i>
             </a>
             {{/if}}
             {{#if member2Twitter}}
             <a href="{{member2Twitter}}" class="text-muted mr-2" target="_blank">
-              <i class="material-icons">alternate_email</i>
+              <i class="material-icons responsive-icon">alternate_email</i>
             </a>
             {{/if}}
             {{#if member2Email}}
             <a href="mailto:{{member2Email}}" class="text-muted" target="_blank">
-              <i class="material-icons">email</i>
+              <i class="material-icons responsive-icon">email</i>
             </a>
             {{/if}}
           </div>
@@ -78,17 +78,17 @@ const hbs = `
           <div class="social-links">
             {{#if member3LinkedIn}}
             <a href="{{member3LinkedIn}}" class="text-muted mr-2" target="_blank">
-              <i class="material-icons">business</i>
+              <i class="material-icons responsive-icon">business</i>
             </a>
             {{/if}}
             {{#if member3Twitter}}
             <a href="{{member3Twitter}}" class="text-muted mr-2" target="_blank">
-              <i class="material-icons">alternate_email</i>
+              <i class="material-icons responsive-icon">alternate_email</i>
             </a>
             {{/if}}
             {{#if member3Email}}
             <a href="mailto:{{member3Email}}" class="text-muted" target="_blank">
-              <i class="material-icons">email</i>
+              <i class="material-icons responsive-icon">email</i>
             </a>
             {{/if}}
           </div>

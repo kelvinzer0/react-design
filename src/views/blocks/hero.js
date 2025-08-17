@@ -8,13 +8,13 @@ const hbs = `
         <div class="d-flex flex-column flex-sm-row">
           {{#if showPrimaryButton}}
           <a href="{{primaryButtonLink}}" class="btn btn-primary btn-lg mb-2 mb-sm-0 mr-sm-3">
-            {{#if primaryButtonIcon}}<i class="material-icons mr-2">{{primaryButtonIcon}}</i>{{/if}}
+            {{#if primaryButtonIcon}}<i class="material-icons responsive-icon mr-2">{{primaryButtonIcon}}</i>{{/if}}
             {{primaryButtonText}}
           </a>
           {{/if}}
           {{#if showSecondaryButton}}
           <a href="{{secondaryButtonLink}}" class="btn btn-outline-secondary btn-lg">
-            {{#if secondaryButtonIcon}}<i class="material-icons mr-2">{{secondaryButtonIcon}}</i>{{/if}}
+            {{#if secondaryButtonIcon}}<i class="material-icons responsive-icon mr-2">{{secondaryButtonIcon}}</i>{{/if}}
             {{secondaryButtonText}}
           </a>
           {{/if}}

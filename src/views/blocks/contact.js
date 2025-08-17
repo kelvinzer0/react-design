@@ -48,7 +48,7 @@ const hbs = `
               </div>
               <div class="text-center">
                 <button type="submit" class="btn btn-primary btn-lg px-5">
-                  {{#if buttonIcon}}<i class="material-icons mr-2">{{buttonIcon}}</i>{{/if}}
+                  {{#if buttonIcon}}<i class="material-icons responsive-icon mr-2">{{buttonIcon}}</i>{{/if}}
                   {{buttonText}}
                 </button>
               </div>
@@ -62,7 +62,7 @@ const hbs = `
       <div class="col-lg-4 text-center mb-4">
         <div class="contact-item">
           <div class="mb-3">
-            <i class="material-icons text-primary" style="font-size: 3rem;">{{addressIcon}}</i>
+            <i class="material-icons responsive-icon text-primary" style="font-size: 3rem;">{{addressIcon}}</i>
           </div>
           <h5 class="font-weight-bold">{{addressTitle}}</h5>
           <p class="text-muted">{{addressText}}</p>
@@ -71,7 +71,7 @@ const hbs = `
       <div class="col-lg-4 text-center mb-4">
         <div class="contact-item">
           <div class="mb-3">
-            <i class="material-icons text-primary" style="font-size: 3rem;">{{phoneIcon}}</i>
+            <i class="material-icons responsive-icon text-primary" style="font-size: 3rem;">{{phoneIcon}}</i>
           </div>
           <h5 class="font-weight-bold">{{phoneTitle}}</h5>
           <p class="text-muted">{{phoneText}}</p>
@@ -80,7 +80,7 @@ const hbs = `
       <div class="col-lg-4 text-center mb-4">
         <div class="contact-item">
           <div class="mb-3">
-            <i class="material-icons text-primary" style="font-size: 3rem;">{{emailIcon}}</i>
+            <i class="material-icons responsive-icon text-primary" style="font-size: 3rem;">{{emailIcon}}</i>
           </div>
           <h5 class="font-weight-bold">{{emailTitle}}</h5>
           <p class="text-muted">{{emailText}}</p>

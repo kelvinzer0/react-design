@@ -12,7 +12,7 @@ const hbs = `
         <div class="card h-100 {{#if useDarkTheme}}bg-secondary text-light{{else}}border-0 shadow-sm{{/if}}">
           <div class="card-body text-center">
             <div class="mb-3">
-              <i class="material-icons text-primary" style="font-size: 3rem;">{{feature1Icon}}</i>
+              <i class="material-icons responsive-icon text-primary" style="font-size: 3rem;">{{feature1Icon}}</i>
             </div>
             <h5 class="card-title font-weight-bold">{{feature1Title}}</h5>
             <p class="card-text">{{feature1Description}}</p>
@@ -23,7 +23,7 @@ const hbs = `
         <div class="card h-100 {{#if useDarkTheme}}bg-secondary text-light{{else}}border-0 shadow-sm{{/if}}">
           <div class="card-body text-center">
             <div class="mb-3">
-              <i class="material-icons text-primary" style="font-size: 3rem;">{{feature2Icon}}</i>
+              <i class="material-icons responsive-icon text-primary" style="font-size: 3rem;">{{feature2Icon}}</i>
             </div>
             <h5 class="card-title font-weight-bold">{{feature2Title}}</h5>
             <p class="card-text">{{feature2Description}}</p>
@@ -34,7 +34,7 @@ const hbs = `
         <div class="card h-100 {{#if useDarkTheme}}bg-secondary text-light{{else}}border-0 shadow-sm{{/if}}">
           <div class="card-body text-center">
             <div class="mb-3">
-              <i class="material-icons text-primary" style="font-size: 3rem;">{{feature3Icon}}</i>
+              <i class="material-icons responsive-icon text-primary" style="font-size: 3rem;">{{feature3Icon}}</i>
             </div>
             <h5 class="card-title font-weight-bold">{{feature3Title}}</h5>
             <p class="card-text">{{feature3Description}}</p>

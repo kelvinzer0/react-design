@@ -9,22 +9,22 @@ const hbs = `
         <div class="social-links">
           {{#if facebookUrl}}
           <a href="{{facebookUrl}}" class="text-light mr-3" target="_blank">
-            <i class="material-icons">facebook</i>
+            <i class="material-icons responsive-icon">facebook</i>
           </a>
           {{/if}}
           {{#if twitterUrl}}
           <a href="{{twitterUrl}}" class="text-light mr-3" target="_blank">
-            <i class="material-icons">{{twitterIcon}}</i>
+            <i class="material-icons responsive-icon">{{twitterIcon}}</i>
           </a>
           {{/if}}
           {{#if linkedinUrl}}
           <a href="{{linkedinUrl}}" class="text-light mr-3" target="_blank">
-            <i class="material-icons">business</i>
+            <i class="material-icons responsive-icon">business</i>
           </a>
           {{/if}}
           {{#if instagramUrl}}
           <a href="{{instagramUrl}}" class="text-light mr-3" target="_blank">
-            <i class="material-icons">photo_camera</i>
+            <i class="material-icons responsive-icon">photo_camera</i>
           </a>
           {{/if}}
         </div>
@@ -57,7 +57,7 @@ const hbs = `
             <input type="email" class="form-control" placeholder="{{newsletterPlaceholder}}" aria-label="Email">
             <div class="input-group-append">
               <button class="btn btn-primary" type="submit">
-                <i class="material-icons">{{newsletterButtonIcon}}</i>
+                <i class="material-icons responsive-icon">{{newsletterButtonIcon}}</i>
               </button>
             </div>
           </div>

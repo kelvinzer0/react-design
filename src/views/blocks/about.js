@@ -41,7 +41,7 @@ const hbs = `
           </div>
           {{#if showButton}}
           <a href="{{buttonLink}}" class="btn btn-primary btn-lg mt-3">
-            {{#if buttonIcon}}<i class="material-icons mr-2">{{buttonIcon}}</i>{{/if}}
+            {{#if buttonIcon}}<i class="material-icons responsive-icon mr-2">{{buttonIcon}}</i>{{/if}}
             {{buttonText}}
           </a>
           {{/if}}

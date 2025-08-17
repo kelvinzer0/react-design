@@ -10,6 +10,7 @@
     "file-saver": "^2.0.5",
     "gh-pages": "^4.0.0",
     "handlebars": "^4.7.6",
+    "handlebars-to-jsx": "^0.1.5",
     "jszip": "^3.10.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

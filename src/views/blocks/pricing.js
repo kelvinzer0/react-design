@@ -1,35 +1,83 @@
 const hbs = `
 <section class="pricing-section {{#if useDarkTheme}}bg-dark text-light{{else}}bg-white{{/if}} py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center mb-5">
-        <h2 class="display-5 font-weight-bold">{{sectionTitle}}</h2>
-        <p class="lead text-muted">{{sectionSubtitle}}</p>
+<div class="container">
+<div class="row justify-content-center">
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card {{#if useDarkTheme}}bg-secondary text-light{{else}}border shadow-sm{{/if}} h-100">
+      <div class="card-header text-center {{#if useDarkTheme}}bg-dark{{else}}bg-light{{/if}}">
+        <h5 class="card-title mb-0">{{plan1Name}}</h5>
       </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card {{#if useDarkTheme}}bg-secondary text-light{{else}}border shadow-sm{{/if}} h-100">
-          <div class="card-header text-center {{#if useDarkTheme}}bg-dark{{else}}bg-light{{/if}}">
-            <h5 class="card-title mb-0">{{plan1Name}}</h5>
-          </div>
-          <div class="card-body text-center">
-            <div class="mb-3">
-              <span class="display-4 font-weight-bold">{{plan1Price}}</span>
-              <small class="text-muted">/{{plan1Period}}</small>
-            </div>
-            <p class="text-muted">{{plan1Description}}</p>
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="material-icons text-success mr-2">check_circle</i>{{plan3Feature4}}</li>
-            </ul>
-          </div>
-          <div class="card-footer text-center">
-            <a href="{{plan3Link}}" class="btn btn-outline-primary btn-block">{{plan3ButtonText}}</a>
-          </div>
+      <div class="card-body text-center">
+        <div class="mb-3">
+          <span class="display-4 font-weight-bold">{{plan1Price}}</span>
+          <small class="text-muted">/{{plan1Period}}</small>
         </div>
+        <p class="text-muted">{{plan1Description}}</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan1Feature1}}</li>
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan1Feature2}}</li>
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan1Feature3}}</li>
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan1Feature4}}</li>
+        </ul>
+      </div>
+      <div class="card-footer text-center">
+        <a href="{{plan1Link}}" class="btn btn-outline-primary btn-block">{{plan1ButtonText}}</a>
       </div>
     </div>
   </div>
+  
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card {{#if useDarkTheme}}bg-secondary text-light{{else}}border shadow-sm{{/if}} h-100 {{#if plan2Popular}}border-primary{{/if}}">
+      {{#if plan2Popular}}
+      <div class="badge badge-primary position-absolute" style="top: -10px; right: 15px;">Popular</div>
+      {{/if}}
+      <div class="card-header text-center {{#if useDarkTheme}}bg-dark{{else}}bg-light{{/if}}">
+        <h5 class="card-title mb-0">{{plan2Name}}</h5>
+      </div>
+      <div class="card-body text-center">
+        <div class="mb-3">
+          <span class="display-4 font-weight-bold">{{plan2Price}}</span>
+          <small class="text-muted">/{{plan2Period}}</small>
+        </div>
+        <p class="text-muted">{{plan2Description}}</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan2Feature1}}</li>
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan2Feature2}}</li>
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan2Feature3}}</li>
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan2Feature4}}</li>
+        </ul>
+      </div>
+      <div class="card-footer text-center">
+        <a href="{{plan2Link}}" class="btn {{#if plan2Popular}}btn-primary{{else}}btn-outline-primary{{/if}} btn-block">{{plan2ButtonText}}</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="card {{#if useDarkTheme}}bg-secondary text-light{{else}}border shadow-sm{{/if}} h-100">
+      <div class="card-header text-center {{#if useDarkTheme}}bg-dark{{else}}bg-light{{/if}}">
+        <h5 class="card-title mb-0">{{plan3Name}}</h5>
+      </div>
+      <div class="card-body text-center">
+        <div class="mb-3">
+          <span class="display-4 font-weight-bold">{{plan3Price}}</span>
+          <small class="text-muted">/{{plan3Period}}</small>
+        </div>
+        <p class="text-muted">{{plan3Description}}</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan3Feature1}}</li>
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan3Feature2}}</li>
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan3Feature3}}</li>
+          <li class="mb-2"><i class="material-icons responsive-icon text-success mr-2">check_circle</i>{{plan3Feature4}}</li>
+        </ul>
+      </div>
+      <div class="card-footer text-center">
+        <a href="{{plan3Link}}" class="btn btn-outline-primary btn-block">{{plan3ButtonText}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </section>
 `;
 

@@ -10,6 +10,12 @@ const hbs = `
     <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
     <title>Hello, world!</title>
     <style>
+        .responsive-icon {
+          font-family: 'Material Icons';
+          font-size: inherit;   /* ikut ukuran font parent */
+          line-height: 1;
+          vertical-align: middle;
+        }
         .drag-n-drop-placeholder {
             border: 2px dashed black; 
         }

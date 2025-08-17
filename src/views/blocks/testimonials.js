@@ -1,3 +1,13 @@
+import Handlebars from 'handlebars';
+
+Handlebars.registerHelper('repeat', function(count, options) {
+  let result = '';
+  for (let i = 0; i < parseInt(count) || 0; i++) {
+    result += options.fn(this);
+  }
+  return result;
+});
+
 const hbs = `
 <section class="testimonials-section {{#if useDarkTheme}}bg-dark text-light{{else}}bg-light{{/if}} py-5">
   <div class="container">
@@ -13,7 +23,7 @@ const hbs = `
           <div class="card-body">
             <div class="mb-3">
               {{#repeat testimonial1Rating}}
-              <i class="material-icons text-warning">star</i>
+              <i class="material-icons responsive-icon text-warning">star</i>
               {{/repeat}}
             </div>
             <blockquote class="blockquote mb-0">
@@ -37,7 +47,7 @@ const hbs = `
           <div class="card-body">
             <div class="mb-3">
               {{#repeat testimonial2Rating}}
-              <i class="material-icons text-warning">star</i>
+              <i class="material-icons responsive-icon text-warning">star</i>
               {{/repeat}}
             </div>
             <blockquote class="blockquote mb-0">
@@ -61,7 +71,7 @@ const hbs = `
           <div class="card-body">
             <div class="mb-3">
               {{#repeat testimonial3Rating}}
-              <i class="material-icons text-warning">star</i>
+              <i class="material-icons responsive-icon text-warning">star</i>
               {{/repeat}}
             </div>
             <blockquote class="blockquote mb-0">

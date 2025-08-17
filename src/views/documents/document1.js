@@ -10,6 +10,12 @@ const hbs = `
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <title>Hello, world!</title>
     <style>
+        .responsive-icon {
+          font-family: 'Material Icons';
+          font-size: inherit;   /* ikut ukuran font parent */
+          line-height: 1;
+          vertical-align: middle;
+        }
         .drag-n-drop-placeholder {
             border: 2px dashed black; 
         }

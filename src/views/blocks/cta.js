@@ -9,13 +9,13 @@ const hbs = `
       <div class="col-lg-4 text-lg-right mt-3 mt-lg-0">
         {{#if showPrimaryButton}}
         <a href="{{primaryButtonLink}}" class="btn {{#if useDarkTheme}}btn-light{{else}}btn-light{{/if}} btn-lg mr-3 mb-2 mb-sm-0">
-          {{#if primaryButtonIcon}}<i class="material-icons mr-2">{{primaryButtonIcon}}</i>{{/if}}
+          {{#if primaryButtonIcon}}<i class="material-icons responsive-icon responsive-icon mr-2">{{primaryButtonIcon}}</i>{{/if}}
           {{primaryButtonText}}
         </a>
         {{/if}}
         {{#if showSecondaryButton}}
         <a href="{{secondaryButtonLink}}" class="btn btn-outline-light btn-lg">
-          {{#if secondaryButtonIcon}}<i class="material-icons mr-2">{{secondaryButtonIcon}}</i>{{/if}}
+          {{#if secondaryButtonIcon}}<i class="material-icons responsive-icon responsive-icon mr-2">{{secondaryButtonIcon}}</i>{{/if}}
           {{secondaryButtonText}}
         </a>
         {{/if}}
@@ -27,7 +27,7 @@ const hbs = `
 
 const block = {
   hbs,
-  name: 'Call to Action Section #1',
+  name: 'Call to Action Section #1 cta',
   previewImageUrl: 'https://i.imgur.com/cta1.png',
   category: 'cta',
   defaultData: {
